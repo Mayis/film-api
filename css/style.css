@@ -1,0 +1,793 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+#header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 10vh;
+  background-color: #f0f0f0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  border-bottom: 2px solid #ff3600;
+}
+
+#header .logoDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Comfortaa", cursive;
+  cursor: pointer;
+}
+
+#header .logoDiv .my {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+#header .logoDiv .film {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+#header .searchDiv {
+  width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: bounceIn 2s;
+          animation: bounceIn 2s;
+}
+
+@media screen and (max-width: 850px) {
+  #header .searchDiv {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #header .searchDiv {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #header .searchDiv {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #header .searchDiv {
+    width: 150px;
+  }
+}
+
+#header .searchDiv #search {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ff3600;
+  border-radius: 8px;
+  font-family: "Barlow Condensed", sans-serif;
+  text-align: center;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 550px) {
+  #header .searchDiv #search {
+    height: 30px;
+  }
+}
+
+#header .searchDiv #search::-webkit-input-placeholder {
+  text-align: center;
+  font-size: 15px;
+  color: #ff3600;
+  font-family: "Comfortaa", cursive;
+}
+
+#header .searchDiv #search:-ms-input-placeholder {
+  text-align: center;
+  font-size: 15px;
+  color: #ff3600;
+  font-family: "Comfortaa", cursive;
+}
+
+#header .searchDiv #search::-ms-input-placeholder {
+  text-align: center;
+  font-size: 15px;
+  color: #ff3600;
+  font-family: "Comfortaa", cursive;
+}
+
+#header .searchDiv #search::placeholder {
+  text-align: center;
+  font-size: 15px;
+  color: #ff3600;
+  font-family: "Comfortaa", cursive;
+}
+
+@media screen and (max-width: 550px) {
+  #header .searchDiv #search::-webkit-input-placeholder {
+    font-size: 10px;
+  }
+  #header .searchDiv #search:-ms-input-placeholder {
+    font-size: 10px;
+  }
+  #header .searchDiv #search::-ms-input-placeholder {
+    font-size: 10px;
+  }
+  #header .searchDiv #search::placeholder {
+    font-size: 10px;
+  }
+}
+
+#header .menuDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .menuDiv i {
+  font-size: 20px;
+  color: #ff3600;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+#header .menuDiv .menuP {
+  font-family: "Comfortaa", cursive;
+  cursor: pointer;
+  font-size: 14px;
+  color: #ff3600;
+}
+
+.menuElements {
+  width: 100%;
+  height: 15vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: none;
+  -ms-grid-columns: auto auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  z-index: 99999;
+  background-color: #f0f0f0;
+  -webkit-transition: 2s;
+  transition: 2s;
+  -webkit-animation: none;
+          animation: none;
+  border-bottom: 4px solid #ff3600;
+}
+
+@media screen and (max-width: 500px) {
+  .menuElements {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.menuElements .color {
+  color: blue;
+}
+
+.menuElements .menu-item {
+  cursor: pointer;
+  font-family: "Comfortaa", cursive;
+}
+
+@media screen and (max-width: 950px) {
+  .menuElements .menu-item {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .menuElements .menu-item {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .menuElements .menu-item {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .menuElements .menu-item {
+    padding: 0px 7px;
+  }
+}
+
+.menuElements .menu-item:hover {
+  color: #ff3600;
+  font-weight: 400;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menuElements #closeIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+  .menuElements #closeIcon {
+    font-size: 12px;
+  }
+}
+
+#main {
+  padding-top: 120px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  background-color: #f0f0f0;
+}
+
+@media screen and (max-width: 1150px) {
+  #main {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #main {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #main {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+}
+
+#main .movieDiv {
+  width: 250px;
+  height: 400px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+#main .movieDiv:hover {
+  outline: 4px solid #ff3600;
+}
+
+#main .movieDiv:hover .rateDiv {
+  right: 10px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#main .movieDiv .rateDiv {
+  -webkit-transition: 1s;
+  transition: 1s;
+  position: absolute;
+  z-index: 55;
+  top: 5px;
+  right: -80px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main .movieDiv .rateDiv .rateP {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#main .movieDiv .imgDiv {
+  width: 100%;
+  height: 100%;
+}
+
+#main .movieDiv .imgDiv .movieImg {
+  height: 100%;
+  width: 100%;
+}
+
+#main .movieDiv .movieNameDiv {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  z-index: 11;
+  bottom: 0;
+  background-color: #000000b0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main .movieDiv .movieNameDiv .movieNameP {
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#movieMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-top: 10vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px;
+  position: relative;
+}
+
+#movieMain .backDiv {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -11;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  background-size: cover;
+}
+
+@media screen and (max-width: 1050px) {
+  #movieMain {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #movieMain {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#movieMain .chosenMovieImg {
+  width: 300px;
+  height: 450px;
+  background-color: black;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 5px 38px 25px rgba(0, 0, 0, 0.82);
+          box-shadow: 4px 5px 38px 25px rgba(0, 0, 0, 0.82);
+}
+
+@media screen and (max-width: 850px) {
+  #movieMain .chosenMovieImg {
+    width: 450px;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #movieMain .chosenMovieImg {
+    width: 400px;
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #movieMain .chosenMovieImg {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+#movieMain .chosenMovieImg .chosenImg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#movieMain .aboutChosenMovie {
+  margin-left: 140px;
+  background-color: rgba(255, 255, 255, 0.438);
+  width: 620px;
+  padding: 20px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 380px;
+}
+
+@media screen and (max-width: 1100px) {
+  #movieMain .aboutChosenMovie {
+    margin-left: 80px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  #movieMain .aboutChosenMovie {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #movieMain .aboutChosenMovie {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #movieMain .aboutChosenMovie {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #movieMain .aboutChosenMovie {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 0;
+    margin-top: 30px;
+    height: auto;
+  }
+}
+
+#movieMain .aboutChosenMovie .chosenName {
+  font-size: 40px;
+  font-family: "Comfortaa", cursive;
+  font-weight: bold;
+}
+
+#movieMain .aboutChosenMovie .chosenGanre {
+  font-size: 19px;
+  font-family: "Barlow Condensed", sans-serif;
+  word-spacing: 15px;
+  margin: 10px;
+}
+
+#movieMain .aboutChosenMovie .someListAndWatch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0px;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 430px;
+}
+
+@media screen and (max-width: 900px) {
+  #movieMain .aboutChosenMovie .someListAndWatch {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #movieMain .aboutChosenMovie .someListAndWatch {
+    width: 100%;
+  }
+}
+
+#movieMain .aboutChosenMovie .someListAndWatch .fa-solid {
+  -webkit-transition: 1s;
+  transition: 1s;
+  padding: 15px 15px;
+  border-radius: 50%;
+}
+
+#movieMain .aboutChosenMovie .someListAndWatch .fa-solid:hover {
+  background-color: rgba(255, 255, 255, 0.322);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@media screen and (max-width: 400px) {
+  #movieMain .aboutChosenMovie .someListAndWatch .fa-solid {
+    padding: 12px 12px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #movieMain .aboutChosenMovie .someListAndWatch .fa-solid {
+    padding: 8px 8px;
+  }
+}
+
+#movieMain .aboutChosenMovie .someListAndWatch .playDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 15px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#movieMain .aboutChosenMovie .someListAndWatch .playDiv:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.322);
+}
+
+@media screen and (max-width: 400px) {
+  #movieMain .aboutChosenMovie .someListAndWatch .playDiv {
+    padding: 10px 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #movieMain .aboutChosenMovie .someListAndWatch .playDiv {
+    padding: 8px 8px;
+  }
+}
+
+#movieMain .aboutChosenMovie .someListAndWatch .playDiv .playp {
+  margin-left: 5px;
+  font-family: "Comfortaa", cursive;
+}
+
+#movieMain .aboutChosenMovie .someListAndWatch .playDiv .fa-solid {
+  background-color: transparent;
+  padding: 0;
+}
+
+#movieMain .aboutChosenMovie .overviewDiv {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 450px) {
+  #movieMain .aboutChosenMovie .overviewDiv {
+    text-align: center;
+  }
+}
+
+#movieMain .aboutChosenMovie .overviewDiv .overviewh3 {
+  font-family: "Comfortaa", cursive;
+  font-size: 25px;
+}
+
+#movieMain .aboutChosenMovie .overviewDiv .movieOverview {
+  margin-top: 20px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.actorsDiv {
+  width: 90%;
+  height: 250px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 3px solid #ff3600;
+  border-radius: 15px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1100px) {
+  .actorsDiv {
+    width: 100%;
+  }
+}
+
+.actorsDiv .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .actorsDiv .swiper .swiper-wrapper {
+    width: calc(100% / 3) !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .actorsDiv .swiper .swiper-wrapper {
+    width: calc(100% / 2) !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .actorsDiv .swiper .swiper-wrapper {
+    width: calc(100% / 1) !important;
+  }
+}
+
+.actorsDiv .swiper .swiper-wrapper .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 1000px) {
+  .actorsDiv .swiper .swiper-wrapper .swiper-slide {
+    width: 100% !important;
+  }
+}
+
+.actorsDiv .swiper .swiper-wrapper .swiper-slide .imgDivSlide {
+  background-color: transparent;
+  overflow: hidden;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 180px;
+  width: 180px;
+}
+
+.actorsDiv .swiper .swiper-wrapper .swiper-slide .imgDivSlide .imgact {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.actorsDiv .swiper .swiper-wrapper .swiper-slide .actorNameH1 {
+  padding: 10px;
+  font-size: 14px;
+  font-family: "Comfortaa", cursive;
+}
+
+.popUp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 111111;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 30px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.popUp .fa-solid {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.popUp .videoDiv {
+  height: 400px;
+  width: 600px;
+  background: black;
+}
+
+.loadingDiv {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 222222;
+  top: 0;
+  left: 0;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+
+.loadingDiv .balls {
+  height: 197px;
+  width: 197px;
+  background-color: black;
+  background: transparent;
+}
+
+.loadingDiv .balls .loadImg {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Selected Movie</title>
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+		
+		<script defer src="../script/lib.js"></script>
+		<script defer src="../script/movie.js"></script>
+        <script defer src="../script/script.js"></script>
+
+	</head>
+	<body>
+		<!-- HEADER NAV BAR -->
+		<header id="header">
+			<div class="logoDiv">
+				<span class="my">MY</span>
+				<div class="film">film</div>
+			</div>
+			<div class="searchDiv">
+				<input
+					type="text"
+					name="search"
+					id="search"
+					placeholder="search movie or TV show"
+				/>
+			</div>
+			<div class="menuDiv">
+				<i class="fa-solid fa-bars" class="menuIcon"></i>
+				<p class="menuP">MENU</p>
+			</div>
+		</header>
+		<div class="menuElements">
+			<i class="fa-solid fa-xmark" id="closeIcon"></i>
+		</div>
+		<!-- MOVIE PART -->
+		<main id="movieMain">
+			</div>
+		</main>
+		<!-- ACTOR PART -->
+        <div class="actorsDiv">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper"></div>        
+        	</div>
+		</div>
+		<!-- POP UP PART -->
+		<div class="popUp">
+			<i class="fa-solid fa-xmark" id="closePopUp"></i>
+			 <div class="videoDiv"></div> 	
+		</div>
+		<div class="loadingDiv">
+			<div class="balls">
+				<img src="../css/Spinner-0.6s-197px.gif" alt="" class="loadImg">
+			</div>
+		</div>
+
+
+		<!-- JSCRIPTSS  FOR ICONS AND SLIDER -->
+		<script
+			src="https://kit.fontawesome.com/3de4b69a9a.js"
+			crossorigin="anonymous"
+		></script>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <!-- Initialize Swiper -->
+    <script>
+		var swiper = new Swiper(".mySwiper", {
+			slidesPerView: 4,
+			centeredSlides: false,
+			spaceBetween: 30,
+			grabCursor: true,
+			pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+			},
+		});
+    </script>
+	</body>
+</html>
